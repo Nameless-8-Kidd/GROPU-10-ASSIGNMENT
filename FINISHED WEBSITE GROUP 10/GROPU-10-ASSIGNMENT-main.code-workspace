@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../INTRO TO WEB GROUP 10/pictures"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501
+	}
+}

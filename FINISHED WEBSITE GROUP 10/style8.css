@@ -1,0 +1,286 @@
+  
+h1{
+    color: #fff;
+}
+
+body {
+      background-image: url('pictures/55.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 50px;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 50;
+      border: 5px solid black;
+      box-shadow: 0 0 15px lightgoldenrodyellow;
+      backdrop-filter: blur(25px);
+    }
+
+    .logo {
+      color: white;
+      font-family:  Brush Script MT, Lucida Handwriting;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    .hamburger {
+      display: block;
+      cursor: pointer;
+      width: 30px;
+      height: 25px;
+      position: relative;
+      z-index: 100;
+    }
+
+    .hamburger span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background: white;
+      margin: 5px 0;
+      transition: 0.4s ease;
+    }
+
+    .nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100vh;
+      width: 200px;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: 0.4s ease;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      margin: 15px 0;
+      position: relative;
+    }
+
+    .nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 3px;
+      background: rgb(169, 105, 8);
+      border-radius: 5px;
+      transform: scaleX(0);
+      transition: .3s ease;
+    }
+
+    .nav a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .menu-toggle:checked + .hamburger span:nth-child(1) {
+      transform: rotate(45deg);
+      position: absolute;
+      top: 10px;
+    }
+
+    .menu-toggle:checked + .hamburger span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle:checked + .hamburger span:nth-child(3) {
+      transform: rotate(-45deg);
+      position: absolute;
+      top: 10px;
+    }
+
+    .menu-toggle:checked ~ .nav {
+      right: 0;
+    }
+
+    /* Desktop */
+    @media (min-width: 768px) {
+      .hamburger, .menu-toggle {
+        display: none;
+      }
+
+      .nav {
+        position: static;
+        height: auto;
+        width: auto;
+        flex-direction: row;
+        background: transparent;
+        justify-content: flex-end;
+      }
+
+      .nav a {
+        margin-left: 30px;
+        font-size: 1.1em;
+      }
+    }
+
+nav .hyper-links ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+nav .hyper-links ul li {
+  margin: 0 15px;
+   color: #fff;
+}
+
+nav .hyper-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav .hyper-links ul li a:hover {
+  text-decoration: underline;
+   color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+header {
+
+  padding: 15px 0;
+  color: white;
+}
+
+.hyper-links ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+   color: #fff;
+}
+
+.hyper-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+   color: #fff;
+}
+
+.hyper-links ul li a:hover {
+  text-decoration: underline;
+   color: #fff;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 40px;
+  background: #fff;
+  border: 3px solid black;
+  border-radius: 16px;
+  box-shadow: 0 4px 25px lightgoldenrodyellow;
+  background: transparent;
+  backdrop-filter: blur(20px);
+}
+
+.form-container h1.sign {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.form-container input{
+   width: 100%;
+  background: transparent;
+  color: white;
+  padding: 12px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 50px;
+}
+
+.form-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.checkbox-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.radio-group label{
+  font-weight: normal;
+}
+
+.checkbox-group label {
+  font-weight: normal;
+}
+
+button {
+  width: 250px;
+  background: transparent;
+  color: white;
+  padding: 12px;
+  border: 2px solid white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 50px;
+}
+
+button:hover {
+  background-color:  rgba(169, 105, 8, 0.952);
+  color: black;
+}
